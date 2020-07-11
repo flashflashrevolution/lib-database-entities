@@ -1,5 +1,5 @@
 {
-   "name": "database-entities",
+   "name": "@flashflashrevolution/database-entities",
    "version": "0.3.0",
    "description": "Collection of database entities and migrations for use in FFR packages.",
    "main": "dist/index.js",
