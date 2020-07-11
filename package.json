@@ -4,7 +4,6 @@
    "description": "Collection of database entities and migrations for use in FFR packages.",
    "main": "dist/index.js",
    "types": "dist/index.d.ts",
-   "private": true,
    "prepublish": "./node_modules/.bin/tsc",
    "scripts": {
       "start": "ts-node src/index.ts",
