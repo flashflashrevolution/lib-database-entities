@@ -12,7 +12,7 @@
    },
    "repository": {
       "type": "git",
-      "url": "git+ssh://git@github.com/flashflashrevolution/database-entities.git"
+      "url": "ssh://git@github.com/flashflashrevolution/database-entities.git"
    },
    "author": "Zageron",
    "license": "AGPL-3.0-only",
