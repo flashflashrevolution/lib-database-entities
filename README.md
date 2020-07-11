@@ -17,3 +17,10 @@
 ```bash
 npm run typeorm migration:run -- --connection patreon --config ormconfig.production
 ```
+
+## Setting up NPM
+
+```.npmrc
+@flashflashrevolution:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=TOKEN_WITH_PACKAGE_PERMS
+```
