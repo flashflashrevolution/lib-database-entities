@@ -1,1 +1,1 @@
-export * as LinkSpec from "./LinkSpec";
+export * as Link from "./Link";

@@ -1,1 +1,1 @@
-export * as PatreonLink from "./entity/PatreonLink"
+export * from "./entity/PatreonLink"

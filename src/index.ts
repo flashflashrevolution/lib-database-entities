@@ -1,4 +1,5 @@
 import "reflect-metadata";
 
 export * as Entities from "./entities";
-export * as LinkSpec from "./tableManipulators";
+export * as Specs from "./tableManipulators";
+export { Initialize } from "./Database";
