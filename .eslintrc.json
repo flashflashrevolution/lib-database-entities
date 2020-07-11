@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "ignorePatterns": ["**/migration/*.ts"],
+  "rules": {
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        "allowAny": true,
+        "allowNullish": true
+      }
+    ],
+    "max-len": ["error", { "code": 120, "tabWidth": 4 }],
+    "curly": "error",
+    "object-curly-newline": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "brace-style": [
+      "error",
+      "allman"
+    ]
+  }
+}

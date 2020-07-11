@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "name": "Debug Library",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "src/link.ts"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register"
+            ],
+            "env": {
+                "TS_NODE_PROJECT": "tsconfig.json"
+            },
+            "sourceMaps": true,
+            "internalConsoleOptions": "openOnSessionStart",
+            "preLaunchTask": "tsc: build - tsconfig.json"
+        },
+        {
+            "name": "Debug Current Library File",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "${relativeFile}"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register"
+            ],
+            "env": {
+                "TS_NODE_PROJECT": "tsconfig.json"
+            },
+            "sourceMaps": true,
+            "internalConsoleOptions": "openOnSessionStart",
+            "preLaunchTask": "tsc: build - tsconfig.json"
+        }
+    ]
+}
