@@ -26,3 +26,11 @@ npm login --registry=https://npm.pkg.github.com --scope=flashflashrevolution
 # access token (https://github.com/settings/tokens, admin:org, delete:packages, repo, write:packages)
 # github email
 ```
+
+## Publishing package
+
+```bash
+# npm version -h # For details on patch level options.
+npm version patch -m "Update comment."
+npm publish
+```
