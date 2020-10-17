@@ -20,7 +20,9 @@ npm run typeorm migration:run -- --connection patreon --config ormconfig.product
 
 ## Setting up NPM
 
-```.npmrc
-@flashflashrevolution:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/:_authToken=TOKEN_WITH_PACKAGE_PERMS
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=flashflashrevolution
+# username (lowercase)
+# access token (https://github.com/settings/tokens, admin:org, delete:packages, repo, write:packages)
+# github email
 ```
