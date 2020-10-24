@@ -4,9 +4,7 @@
 import { MysqlErrorCodes } from 'mysql-error-codes';
 import { PatreonLink } from '../entity/PatreonLink';
 import { AccessToken } from 'simple-oauth2';
-import { Connection, getConnection } from 'typeorm';
-
-const DB_PATREON: string = process.env.DB_PATREON as string;
+import { Connection } from 'typeorm';
 
 enum Result
 {
@@ -24,13 +22,12 @@ function BindUserData(accessToken: AccessToken, ffrUserId: number): PatreonLink
     return link;
 }
 
-async function WriteLinkData(accessToken: AccessToken, ffrUserId: number): Promise<Result>
+async function WriteLinkData(connection: Connection, accessToken: AccessToken, ffrUserId: number): Promise<Result>
 {
     let result: Result = Result.SUCCESS;
 
     const link: PatreonLink = BindUserData(accessToken, ffrUserId);
 
-    const connection: Connection = getConnection(DB_PATREON);
     await connection.manager.save(link)
         .catch((error) =>
         {
@@ -49,9 +46,8 @@ async function WriteLinkData(accessToken: AccessToken, ffrUserId: number): Promi
     return result;
 }
 
-async function ReadLinkData(ffrUserId: number): Promise<PatreonLink[]>
+async function ReadLinkData(connection: Connection, ffrUserId: number): Promise<PatreonLink[]>
 {
-    const connection: Connection = getConnection(DB_PATREON);
     return await connection.getRepository(PatreonLink)
         .find({ where: { ffr_userid: ffrUserId } });
 }
