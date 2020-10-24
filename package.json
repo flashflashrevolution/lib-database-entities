@@ -12,14 +12,14 @@
    },
    "repository": {
       "type": "git",
-      "url": "ssh://git@github.com/flashflashrevolution/database-entities.git"
+      "url": "ssh://git@github.com/flashflashrevolution/lib-database-entities.git"
    },
    "author": "Zageron",
    "license": "AGPL-3.0-only",
    "bugs": {
-      "url": "https://github.com/flashflashrevolution/database-entities/issues"
+      "url": "https://github.com/flashflashrevolution/lib-database-entities/issues"
    },
-   "homepage": "https://github.com/flashflashrevolution/database-entities#readme",
+   "homepage": "https://github.com/flashflashrevolution/lib-database-entities#readme",
    "dependencies": {
       "dotenv": "^8.2.0",
       "mysql-error-codes": "^0.1.2",
