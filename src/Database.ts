@@ -2,20 +2,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { createConnection, ConnectionOptions } from 'typeorm';
+import { createConnection, ConnectionOptions, Connection } from 'typeorm';
 
-function Initialize(connectionOptions: ConnectionOptions): boolean
+async function Initialize(connectionOptions: ConnectionOptions): Promise<Connection>
 {
-    let success = true;
-
-    createConnection(connectionOptions)
-        .catch(error =>
+    return await createConnection(connectionOptions)
+        .then((value: Connection) =>
         {
-            console.error(error);
-            success = false;
+            return Promise.resolve(value);
+        })
+        .catch(() =>
+        {
+            return Promise.reject("Unable to connect to database.");
         });
-
-    return success;
 }
 
 export { Initialize };
