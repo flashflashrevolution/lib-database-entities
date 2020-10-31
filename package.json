@@ -25,18 +25,18 @@
       "mysql-error-codes": "^0.1.2",
       "mysql2": "^2.2.5",
       "reflect-metadata": "^0.1.13",
-      "simple-oauth2": "3.4.0",
+      "simple-oauth2": "4.1.0",
       "typeorm": "0.2.28",
       "typescript-string-operations": "^1.4.0"
    },
    "devDependencies": {
       "@types/node": "^14.14.6",
-      "@types/simple-oauth2": "2.5.4",
-      "@typescript-eslint/eslint-plugin": "^3.10.1",
-      "@typescript-eslint/parser": "^3.10.1",
+      "@types/simple-oauth2": "4.1.0",
+      "@typescript-eslint/eslint-plugin": "^4.6.0",
+      "@typescript-eslint/parser": "^4.6.0",
       "eslint": "^7.12.1",
-      "ts-node": "^8.10.2",
-      "typescript": "^3.9.7"
+      "ts-node": "^9.0.0",
+      "typescript": "^4.0.5"
    },
    "files": [
       "dist/**"
